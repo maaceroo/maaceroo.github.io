@@ -157,7 +157,7 @@ section {
 
 .content-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
 }
 
@@ -184,10 +184,11 @@ section {
 /* ArXiv Feed Styling */
 #arxivfeed {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
+    font-size: 0.9rem;
 }
 
 #arxivfeed ul {
@@ -195,7 +196,7 @@ section {
 }
 
 #arxivfeed li {
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid var(--border);
 }
 
@@ -203,13 +204,27 @@ section {
     border-bottom: none;
 }
 
+/* Truncate long author lists */
+#arxivfeed li>span:nth-of-type(2),
+#arxivfeed .arxiv-authors {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0.25rem 0;
+}
+
 #arxivfeed a {
     display: block;
     margin-bottom: 0.25rem;
+    font-weight: 600;
 }
 
 #arxivfeed .arxiv-date {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
 }
 
