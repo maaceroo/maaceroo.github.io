@@ -18,12 +18,6 @@
         content="acero, mario, maaceroo, physics, uniatlantico, colombia, neutrino physics, NOvA, DUNE">
     <meta name="author" content="Mario A. Acero Ortega">
 
-    <!-- arXiv Widget Script -->
-    <script type="text/javascript">
-        < !-
-        var arxiv_authorid = "acero_m_1";
-        //--></script>
-    <script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
 </head>
 
 <body>
@@ -132,7 +126,10 @@
                 <section id="publications">
                     <h2>Latest on arXiv</h2>
                     <div id="arxivfeed">
-                        <!-- Feed is injected here by myarticles.js -->
+                        <script type="text/javascript">
+                            var arxiv_authorid = "acero_m_1";
+                        </script>
+                        <script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
                     </div>
                 </section>
             </aside>
